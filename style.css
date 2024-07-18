@@ -1,0 +1,127 @@
+*{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-style: normal;     
+}
+body{
+    background-color: hsl(0, 0%, 81%);
+    border: solid hsl(0, 0%, 81%) ;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.parts-pages{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    /* align-items: start; */
+}
+
+.part{
+    border: 1px solid ;
+    border-radius: 8px;
+    padding: 25px;
+}
+.part-1{
+    background-color: hsl(263, 55%, 52%);
+    border: hsl(263, 55%, 52%);
+    grid-column: 1/3;
+}
+
+.part-2{
+    background-color: hsl(217, 19%, 35%);
+    border: hsl(217, 19%, 35%);
+    grid-column: 3;
+}
+.part-3{
+    background-color: hsl(0, 0%, 100%);
+    border: hsl(0, 0%, 100%);
+    grid-row: 1/3;
+    grid-column: 4;
+}
+.part-4{
+    background-color: hsl(0, 0%, 100%);
+    border: hsl(0, 0%, 100%);   
+    grid-column: 1; 
+}
+.part-5{
+    background-color: hsl(219, 29%, 14%);
+    border: hsl(219, 29%, 14%);
+    grid-column: 2/4
+}
+
+img{
+    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+}
+.personal-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    line-height: 1px;
+    font-size: smaller;
+}
+
+/* .info{
+    margin-top: 0;
+}
+.personal-info{
+    display: flex;
+    
+} */
+.white{
+    color: white;
+    font-weight: normal;
+}
+.info-white{
+    color: hsla(0, 0%, 100%, 0.5);
+    font-weight: normal;
+}
+.black{
+    color: black;
+    font-weight: normal;
+}
+.info-black{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+}
+.text-bold{
+    font-weight: bold;
+    font-weight: 600;
+    margin-top: 0;
+   
+}
+.text{
+    font-size: 12px;
+    font-weight: 300;
+}
+p{
+    line-height: 20px;
+}
+/* background */
+.part-1 {
+    position: relative; /* To position the pseudo-element relative to this container */
+}
+
+.part-1::before {
+    content: "";
+    background: url('images/bg-pattern-quotation.svg') no-repeat;
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 70px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    /* opacity: 1; Adjust as needed */
+    z-index: 0; /* Ensure it is behind the text */
+}
+
+
+.part-1 .personal-info,
+.part-1 p {
+    position: relative; /* Ensure text is above the background image */
+    z-index: 1;
+}
